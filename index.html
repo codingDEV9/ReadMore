@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Read more and read less button functionality.</title>
+   <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+   <div class="container">
+
+      <div class="box">
+         <h2>Lorem ipsum dolor sit amet.</h2>
+         <div class="description_box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut at enim illum nostrum, nesciunt non adipisci repudiandae numquam sed impedit hic eligendi, aperiam sunt provident ullam nemo ratione molestias iure doloribus eaque omnis, mollitia laborum? Assumenda explicabo eveniet accusamus eligendi deserunt voluptates commodi quis itaque eius dolore saepe ad eos blanditiis, quidem nulla, soluta error alias totam inventore asperiores in sequi esse quod? Ad in doloribus numquam. Laboriosam maxime explicabo placeat esse quam perferendis, fugiat culpa optio perspiciatis libero quo harum, corporis dignissimos quas aperiam nam? Animi, tempore, placeat qui enim sunt modi odio saepe quasi iusto incidunt vitae impedit.</p>
+            <button type="button">Read More</button>
+         </div>
+      </div>
+
+      <div class="box">
+         <h2>Lorem ipsum dolor sit amet.</h2>
+         <div class="description_box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut at enim illum nostrum, nesciunt non adipisci repudiandae numquam sed impedit hic eligendi, aperiam sunt provident ullam nemo ratione molestias iure doloribus eaque omnis, mollitia laborum? Assumenda explicabo eveniet accusamus eligendi deserunt voluptates commodi quis itaque eius dolore saepe ad eos blanditiis, quidem nulla, soluta error alias totam inventore asperiores in sequi esse quod? Ad in doloribus numquam. Laboriosam maxime explicabo placeat esse quam perferendis, fugiat culpa optio perspiciatis libero quo harum, corporis dignissimos quas aperiam nam? Animi, tempore, placeat qui enim sunt modi odio saepe quasi iusto incidunt vitae impedit.</p>
+            <button type="button">Read More</button>
+         </div>
+      </div>
+
+      <div class="box">
+         <h2>Lorem ipsum dolor sit amet.</h2>
+         <div class="description_box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut at enim illum nostrum, nesciunt non adipisci repudiandae numquam sed impedit hic eligendi, aperiam sunt provident ullam nemo ratione molestias iure doloribus eaque omnis, mollitia laborum? Assumenda explicabo eveniet accusamus eligendi deserunt voluptates commodi quis itaque eius dolore saepe ad eos blanditiis, quidem nulla, soluta error alias totam inventore asperiores in sequi esse quod? Ad in doloribus numquam. Laboriosam maxime explicabo placeat esse quam perferendis, fugiat culpa optio perspiciatis libero quo harum, corporis dignissimos quas aperiam nam? Animi, tempore, placeat qui enim sunt modi odio saepe quasi iusto incidunt vitae impedit.</p>
+            <button type="button">Read More</button>
+         </div>
+      </div>
+
+      <div class="box">
+         <h2>Lorem ipsum dolor sit amet.</h2>
+         <div class="description_box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut at enim illum nostrum, nesciunt non adipisci repudiandae numquam sed impedit hic eligendi, aperiam sunt provident ullam nemo ratione molestias iure doloribus eaque omnis, mollitia laborum? Assumenda explicabo eveniet accusamus eligendi deserunt voluptates commodi quis itaque eius dolore saepe ad eos blanditiis, quidem nulla, soluta error alias totam inventore asperiores in sequi esse quod? Ad in doloribus numquam. Laboriosam maxime explicabo placeat esse quam perferendis, fugiat culpa optio perspiciatis libero quo harum, corporis dignissimos quas aperiam nam? Animi, tempore, placeat qui enim sunt modi odio saepe quasi iusto incidunt vitae impedit.</p>
+            <button type="button">Read More</button>
+         </div>
+      </div>
+
+   </div>
+
+</body>
+
+<script>
+    let description_box = document.querySelectorAll(".description_box");
+
+description_box.forEach(element => {
+   let button = element.querySelector("button");
+   button.onclick = function(){
+      element.classList.toggle("active");
+      button.classList.toggle("active_button");
+      if(button.classList.contains("active_button")){
+         button.innerHTML = "Read Less";
+      }else{
+         button.innerHTML = "Read More";
+      }
+   }
+});
+</script>
+</html>
